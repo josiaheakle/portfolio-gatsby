@@ -10,8 +10,8 @@ const About = ( props ) => {
     // props : beginAnim ( bool )
 
     const userHead = `Hello, I'm Josiah Eakle, `;
-    const userBody = `I help small businesses and individuals design, develop, and deploy web applications. 
-    Proficient in code, I am driven to create appealing, efficient, and secure software.`;
+    const userBody = `Based in Knoxville TN, I help small buisnesses and individuals design, develop, and deploy their dream websites. 
+    Equiped with powerful content managment solutions, my applications provide streamlined experiences for both administrators and users.`;
 
     const [ activeIcon, setActiveIcon ] = useState('user');
     const [ headText, setHeadText ] = useState(userHead);
@@ -31,7 +31,7 @@ const About = ( props ) => {
             case('computer'):
                 setHeadText('Front-End');
                 setAboutBody(
-                    <span className='about-body'>With an understanding of 
+                    <span className='about-body'>Proficient in
                         <ul className='horizontal-list bold'>
                             <li>HTML</li>
                             <li>CSS</li>
@@ -39,7 +39,7 @@ const About = ( props ) => {
                             <li>TypeScript</li>
                             <li>React.js</li>
                         </ul>
-                        I push to create beautiful and functional websites, designed to be sharp and streamlined for all.
+                        I push to create engaging and appealing application, catered to all users.
                     </span>
                 );
                 break;

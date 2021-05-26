@@ -1,10 +1,3 @@
-const path = require('path');
-const fs = require('fs');
-
-exports.onPostBuild = function() {
-  fs.mkdirSync(path.join(path.dirname(__dirname), 'server', 'public'));
-};
-
 module.exports = {
   siteMetadata: {
     title: "Josiah Eakle Development",
@@ -23,6 +16,5 @@ module.exports = {
       },
       __key: "images",
     },
-  ],
+  ]
 };
-

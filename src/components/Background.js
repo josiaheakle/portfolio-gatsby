@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 const Background = () => {
 
-    const [scroll, setScroll] = useState(window.pageYOffset);
+    const [scroll, setScroll] = useState(0);
 
     const squareRef_1 = useRef(null);
     const squareRef_2 = useRef(null);
@@ -33,6 +33,7 @@ const Background = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
+        handleScroll();
         updateSquarePos();
         return () => {
             window.removeEventListener("scroll", handleScroll);

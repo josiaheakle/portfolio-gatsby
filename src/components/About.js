@@ -50,10 +50,10 @@ const About = ( props ) => {
                         <ul className='horizontal-list bold'>
                             <li>Node</li>
                             <li>Express</li>
-                            <li>Deno</li>
+                            <li>Sanity</li>
                             <li>PHP</li>
                         </ul>
-                        I will deliver a secure back-end or REST API perfect for any use case.
+                        easy content management and dynamic features can be implemented at any time.
                     </span>
                 );
                 break;

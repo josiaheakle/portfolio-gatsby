@@ -55,7 +55,7 @@ const Project = (props) => {
                     {(props.icon && props.onlyImage === true) ? 
                     <motion.img key={`project-image-${props.title}`} initial={{scale:1.1}} animate={{scale:1}} exit={{scale:1.1}} transition={{duration: .6}} className='project-image' src={props.icon} alt={props.title} />
                     : 
-                    <motion.div key={`project-preview-${props.title}`} initial={{scale:1.1}} animate={{scale:1}} exit={{scale:1.1}} className={`project-preview ${props.title} ${(props.brightText) ? 'light-text' : null}`} style={ (props.icon) ? { backgroundImage: `url(${props.icon})` } : null } >
+                    <motion.div key={`project-preview-${props.title}`} initial={{scale:1.1, opacity: 0}} animate={{scale:1, opacity: 8}} exit={{scale:1.1, opacity: 0}} className={`project-preview ${props.title} ${(props.brightText) ? 'light-text' : null}`} style={ (props.icon) ? { backgroundImage: `url(${props.icon})` } : null } >
                         <i className={`project-icon ${props.iconName}`}></i>
                         <h2>{props.title}</h2>
                     </motion.div>

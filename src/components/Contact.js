@@ -16,7 +16,9 @@ const Contact = () => {
         e.preventDefault();
         e.target.reset();
 
-        const res = await fetch(`${process.env.REACT_APP_API_URL}/message`, {
+        console.log(process.env.GATSBY_API_URL);
+
+        const res = await fetch(`${process.env.GATSBY_API_URL}/message`, {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -29,7 +31,7 @@ const Contact = () => {
             })
         });
 
-        setToast('Thank you!')
+        setToast('Thank you!');
 
     }
 

@@ -5,14 +5,12 @@ import { motion, useAnimation } from "framer-motion"
 
 const Background = () => {
 
-    const [scroll, setScroll] = useState(0);
+    const [scroll, setScroll] = useState(window.pageYOffset);
 
     const squareRef_1 = useRef(null);
     const squareRef_2 = useRef(null);
     const squareRef_3 = useRef(null);
     const underlineRef = useRef(null);
-
-    const underlineControls = useAnimation();
 
     const handleScroll = () => setScroll(window.pageYOffset);
 

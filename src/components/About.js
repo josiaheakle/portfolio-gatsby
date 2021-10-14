@@ -5,30 +5,28 @@ import React, { useEffect, useState } from "react";
 import IconInfoBar from "./IconBar/IconInfoBar.js"
 import AnimOnView from "./anim/AnimOnView.js"
 
-const About = ( props ) => {
-
-    // props : beginAnim ( bool )
+const About = () => {
 
     const userHead = `Hello, I'm Josiah Eakle, `;
     const userBody = `Based in Knoxville TN, I help small buisnesses and individuals design, develop, and deploy their dream websites. 
     Equiped with powerful content managment solutions, my applications provide streamlined experiences for both administrators and users.`;
 
-    const [ activeIcon, setActiveIcon ] = useState('user');
-    const [ headText, setHeadText ] = useState(userHead);
-    const [ aboutBody, setAboutBody ] = useState(<p className='about-body'>{userBody}</p>);
-    
+    const [activeIcon, setActiveIcon] = useState('user');
+    const [headText, setHeadText] = useState(userHead);
+    const [aboutBody, setAboutBody] = useState(<p className='about-body'>{userBody}</p>);
+
 
     const setIcon = (iconName) => {
         setActiveIcon(iconName)
     }
 
     useEffect(() => {
-        switch(activeIcon) {
-            case('user'):
+        switch (activeIcon) {
+            case ('user'):
                 setHeadText(userHead);
                 setAboutBody(<p className='about-body'>{userBody}</p>)
                 break;
-            case('computer'):
+            case ('computer'):
                 setHeadText('Front-End');
                 setAboutBody(
                     <span className='about-body'>Proficient in
@@ -43,10 +41,10 @@ const About = ( props ) => {
                     </span>
                 );
                 break;
-            case('database'):
+            case ('database'):
                 setHeadText('Back-End');
                 setAboutBody(
-                    <span className='about-body'>Any user authenticaion or data managment will inevitably require a back-end. Experienced in 
+                    <span className='about-body'>Any user authenticaion or data managment will inevitably require a back-end. Experienced in
                         <ul className='horizontal-list bold'>
                             <li>Node</li>
                             <li>Express</li>
@@ -57,19 +55,19 @@ const About = ( props ) => {
                     </span>
                 );
                 break;
-            case('smartphone'):
+            case ('smartphone'):
                 setHeadText('Mobile Friendly');
                 setAboutBody(<span className='about-body'>
                     Everyone owns a smartphone, my designs emit
                     <ul className='horizontal-list bold'>
                         <li>Responsiveness </li>
                         <li>Easy-to-use UI </li>
-                        <li>Straightforward UX </li> 
+                        <li>Straightforward UX </li>
                     </ul>
-                    to provide clean experiences for both mobile and desktop users. 
+                    to provide clean experiences for both mobile and desktop users.
                 </span>)
                 break;
-            case('lock'):
+            case ('lock'):
                 setHeadText('Security');
                 setAboutBody(<span className='about-body'>
                     Managing data can be dangerous. When producing applications, my understanding of
@@ -81,7 +79,7 @@ const About = ( props ) => {
                     will prove to be crucial.
                 </span>)
                 break;
-            case('upload'):
+            case ('upload'):
                 setHeadText('Hosting and Management');
                 setAboutBody(<span className='about-body'>
                     Building the project is only useful if you have the know-how to host your application. Understanding
@@ -90,13 +88,15 @@ const About = ( props ) => {
                         <li>Hosting Platforms</li>
                         <li>Version Control</li>
                     </ul>
-                    brings crucial skills to the table and can sheild you from confusing domain name management procedures. 
+                    brings crucial skills to the table and can sheild you from confusing domain name management procedures.
                 </span>)
+                break;
+            default:
                 break;
         }
     }, [activeIcon])
 
-    return(
+    return (
         <div className='About align-center full-screen'>
             <AnimOnView>
                 <h1> About Me </h1>

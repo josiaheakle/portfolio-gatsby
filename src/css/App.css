@@ -595,6 +595,7 @@ h2 {
 }
 
 .contact-button {
+	cursor: pointer;
 	height: 2rem;
 	width: var(--small-project-width);
 	outline: none;

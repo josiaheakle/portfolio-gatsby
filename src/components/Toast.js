@@ -1,10 +1,8 @@
 import React from "react"
 
-import { motion, AnimatePresence, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
-const ToastContainer = ( props ) => {
-
-    const controls = useAnimation();
+const ToastContainer = (props) => {
 
     return (
         <motion.div className='ToastContainer'>

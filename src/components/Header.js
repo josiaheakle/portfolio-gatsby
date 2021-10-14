@@ -12,17 +12,15 @@
 */
 
 // react
-import React, { useState, useEffect } from "react"
+import React from "react"
 
 // anim
 import { motion } from "framer-motion"
 
-const Header = (props) => {
-    
-    // props - text
+const Header = () => {
 
     return (
-        <motion.div initial={{opacity: 0}} exit={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.25}} className={`Header`} >
+        <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }} className={`Header`} >
             <motion.h1 > Josiah Eakle Development </motion.h1>
         </motion.div>
     );

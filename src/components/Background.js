@@ -1,7 +1,7 @@
 
 
 import React, { useRef, useEffect, useState } from "react"
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Background = () => {
 
@@ -18,12 +18,12 @@ const Background = () => {
         squareRef_1.current.style.position = 'relative';
         squareRef_2.current.style.position = 'relative';
         squareRef_3.current.style.position = 'relative';
-        
+
         if (scroll > 0) {
             squareRef_1.current.style.bottom = scroll + 'px';
             squareRef_2.current.style.bottom = scroll + 'px';
-            squareRef_3.current.style.bottom = scroll + 'px';    
-            underlineRef.current.style.left =  (scroll - (16 * 16)) + 'px';
+            squareRef_3.current.style.bottom = scroll + 'px';
+            underlineRef.current.style.left = (scroll - (16 * 16)) + 'px';
         }
     }
 
@@ -40,13 +40,13 @@ const Background = () => {
         };
     }, [])
 
-    return(
-        <div className='Background full-screen'> 
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5}} ref={squareRef_1} className="background-square" />
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1.5}} ref={squareRef_2} id='square2' className="background-square" />
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.5}} ref={squareRef_3} className="middle background-square" />
+    return (
+        <div className='Background full-screen'>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} ref={squareRef_1} className="background-square" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} ref={squareRef_2} id='square2' className="background-square" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }} ref={squareRef_3} className="middle background-square" />
             <div className='underline-square-container'>
-                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 3.5}} ref={underlineRef} className="underline-square" />
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.5 }} ref={underlineRef} className="underline-square" />
             </div>
         </div>
     );

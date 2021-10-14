@@ -1,5 +1,5 @@
 // react 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 
 // css
@@ -7,9 +7,6 @@ import '../css/App.css';
 import '../media/icons/css/uicons-regular-rounded.css';
 
 import favicon from "../media/icons/favicon.ico"
-
-// components
-import Header from "../components/Header.js"
 import Intro from "../components/Intro.js"
 import About from "../components/About.js"
 import Projects from "../components/projects/Projects.js"
@@ -23,16 +20,8 @@ import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
 
-  const [renderHeader, setRenderHeader] = useState(false);
-
-  const showHeader = (bool) => {
-    setRenderHeader(bool);
-  }
-
-
   return (
     <div className="App">
-      {/* <CanvasBackground /> */}
       <Helmet >
         <title>JE Development</title>
         <meta charSet='utf-8'></meta>
@@ -40,13 +29,11 @@ const App = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Josiah Eakle Knoxville TN Web Developer" />
       </Helmet>
-      {/* <AnimBackground></AnimBackground> */}
       <Background />
 
       <AnimatePresence>
-        {/* {(!!renderHeader)? <Header key='header' />:null} */}
       </AnimatePresence>
-      <Intro renderHeader={showHeader} />
+      <Intro />
       <About />
       <Projects />
       <Contact />

@@ -23,9 +23,9 @@ import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
 
-  const [ renderHeader, setRenderHeader ] = useState(false);
+  const [renderHeader, setRenderHeader] = useState(false);
 
-  const showHeader = ( bool ) => {
+  const showHeader = (bool) => {
     setRenderHeader(bool);
   }
 
@@ -38,13 +38,13 @@ const App = () => {
         <meta charSet='utf-8'></meta>
         <link rel="icon" href={favicon} type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Josiah Eakle Knoxville TN Web Developer"/>
+        <meta name="description" content="Josiah Eakle Knoxville TN Web Developer" />
       </Helmet>
       {/* <AnimBackground></AnimBackground> */}
       <Background />
 
       <AnimatePresence>
-        {(!!renderHeader)? <Header key='header' />:null}
+        {/* {(!!renderHeader)? <Header key='header' />:null} */}
       </AnimatePresence>
       <Intro renderHeader={showHeader} />
       <About />
